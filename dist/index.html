@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#fff">
+  <!-- Your app title -->
+  <title>慕映阅读</title>
+  <link rel="stylesheet" href="./css/framework7.material.min.css">
+  <!-- Path to Framework7 color related styles, Material Theme -->
+  <link rel="stylesheet" href="./css/framework7.material.colors.min.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="./css/my-app.css">
+  <link rel="stylesheet" href="./bower_components/framework7-icons/css/framework7-icons.css">
+  <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <!-- First, we need to add Panel's overlay that will overlays app while panel is opened -->
+  <div class="panel-overlay"></div>
+
+  <!-- Left panel -->
+  <div class="panel panel-left panel-reveal">
+    <div class="view left-panel-view">
+      <div class="avatar-bg">
+        <div>
+          <img src="./img/avatar.jpg" alt="" width="70">
+          <p>阿简1996</p>
+        </div>
+      </div>
+      <div class="list-block">
+        <ul>
+          <li class="item-content">
+            <div class="item-media"><i class="fa fa-home"></i></div>
+            <div class="item-inner">
+              <div class="item-title">首页</div>
+              <!-- <div class="item-after">Label</div> -->
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i class="fa fa-book"></i></div>
+            <div class="item-inner">
+              <div class="item-title">我的借阅</div>
+              <div class="item-after"><span class="badge">5</span></div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i class="fa fa-server"></i></div>
+            <div class="item-inner">
+              <div class="item-title">书架</div>
+              <div class="item-after"><span class="badge">10</span></div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i class="fa fa-group"></i></div>
+            <div class="item-inner">
+              <div class="item-title">阅览室</div>
+              <div class="item-after"><span class="badge">2</span></div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i class="fa fa-heart"></i></div>
+            <div class="item-inner">
+              <div class="item-title">关注</div>
+              <div class="item-after"><span class="badge">25</span></div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i class="fa fa-moon-o"></i></div>
+            <div class="item-inner">
+              <div class="item-title">夜间模式</div>
+              <div class="item-after">
+
+              </div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i class="fa fa-gear"></i></div>
+            <div class="item-inner">
+              <div class="item-title">设置</div>
+              <div class="item-after">
+
+              </div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i class="fa fa-info-circle"></i></div>
+            <div class="item-inner">
+              <div class="item-title">关于</div>
+              <div class="item-after">
+
+              </div>
+            </div>
+          </li>
+      </div>
+    </div>
+  </div>
+
+  <div class="views tabs toolbar-through">
+
+    <!-- 工具栏 -->
+    <div class="toolbar  tabbar toolbar-bottom">
+      <div class="">
+        <div class="toolbar-inner">
+          <a href="#tab1" class="tab-link">    
+                    <i class="fa fa-book fa-2x"></i>
+                    <span class="tabbar-label">共享阅读</span>
+                </a>
+          <a href="#tab2" class="tab-link">
+                  <i class="fa fa-location-arrow fa-2x"></i>
+                  <span class="tabbar-label">发现</span>
+              </a>
+          <a href="#" class="tab-link open-login-screen">
+                <span>
+                  <i class="fa fa-plus-circle fa-3x"></i>
+                </span>
+              </a>
+          <a href="#tab3" class="tab-link tab3">
+                  <i class="fa fa-address-book fa-2x"></i>
+                  <span class="tabbar-label">通讯</span>
+              </a>
+          <a href="#tab4" class="tab-link">
+                  <i class="fa fa-user-circle fa-2x"></i>
+                 <span class="tabbar-label">我的</span>
+              </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 首页开始 -->
+    <div class="view tab active" id="tab1">
+      <div class="pages">
+        <div class="page" data-page="index">
+
+          <div class="page-content hide-toolbar-on-scroll">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left">
+                  <a href="#" class="link  open-left-panel open-panel" data-panel="left">
+                <i class="fa fa-bars"></i>
+            </a>
+                </div>
+                <div class="center">慕映读书</div>
+                <div class="right">
+                  <a href="#" class="link  open-plus">
+                <i class="fa fa-plus"></i>
+            </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Search Bar -->
+            <form class="searchbar theme-white">
+              <div class="searchbar-input" style="background-color:#ccc">
+                <input type="search" class="jsSearch" placeholder="搜索">
+                <a href="#" class="searchbar-clear">
+                </a>
+              </div>
+              <a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+
+            <!-- Search Bar overlay-->
+            <div class="searchbar-overlay"></div>
+
+            <!-- 占位符 -->
+            <!-- <div class="blank-div bg-color"></div> -->
+            <div class="row bg-color">
+              <div class="col-auto">
+                <h3 class="text-center">话题区</h3>
+              </div>
+            </div>
+
+            <!-- 轮播 -->
+            <!-- Slider -->
+            <div class="swiper-container bg-color">
+              <div class="swiper-container swiper-3">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide box-shadow">
+                    <div class="row">
+                      <div class="col-100">
+                        <p class="text-center"><i class="fa fa-plus-square-o fa-3x"></i></p>
+                      </div>
+                      <div class="col-100">
+                        <p class="text-center swiper-icon-topic-name">创建交流会</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" swiper-slide box-shadow">
+                    <div>
+                      <p class="text-center "><img class="lazy" src="./img/avatar.jpg " alt=" " width="35 " height="35 " style="border-radius:100px; "></p>
+                      <p class="text-center swiper-icon-topic-name ">交流话题区</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide box-shadow">
+                    <div>
+                      <p class="text-center "><img class="lazy" src="./img/avatar.jpg " alt=" " width="35 " height="35 " style="border-radius:100px; "></p>
+                      <p class="text-center swiper-icon-topic-name ">交流话题区</p>
+                      <p class="text-center Live-label">正在直播</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide box-shadow ">
+                    <div>
+                      <p class="text-center "><img class="lazy" src="./img/avatar.jpg " alt=" " width="35 " height="35 " style="border-radius:100px; "></p>
+                      <p class="text-center swiper-icon-topic-name ">交流话题区</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide box-shadow">
+                    <div>
+                      <p class="text-center "><img class="lazy" src="./img/avatar.jpg " alt=" " width="35 " height="35 " style="border-radius:100px; "></p>
+                      <p class="text-center swiper-icon-topic-name ">交流话题区</p>
+                      <p class="text-center Live-label">正在直播</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 占位符 -->
+            <!-- <div class="blank-div bg-color"></div> -->
+            <div class="row bg-color">
+              <div class="col-auto">
+                <h3 class="text-center">专题</h3>
+              </div>
+            </div>
+
+            <!-- 推荐阅读 -->
+            <div class="row related-container">
+              <div class="col-auto ">
+                <div>
+                  <p class="text-center"><img data-src="./img/i-f7-ios.png" alt="" class="lazy related-sections"></p>
+                  <p class="text-center">科学</p>
+                </div>
+              </div>
+              <div class="col-auto  ">
+                <p class="text-center"><img data-src="./img/i-f7-ios.png" alt="" class="lazy related-sections"></p>
+                <p class="text-center">科学</p>
+              </div>
+              <div class="col-auto  ">
+                <p class="text-center"><img data-src="./img/i-f7-ios.png" alt="" class="lazy related-sections"></p>
+                <p class="text-center">科学</p>
+              </div>
+              <div class="col-100 clearfix">
+                <a class="float-right more" href="#">
+                  更多>>
+                </a>
+              </div>
+            </div>
+
+            <div class="row bg-color">
+              <div class="col-auto">
+                <h3 class="text-center">阅读推荐</h3>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-33">
+                <div>
+                  <p class="text-center"><img data-src="./img/raw_1499427471.jpeg" alt="" class="lazy book-image"></p>
+                  <p class="text-center">世界的逻辑</p>
+                  <p class="text-center">阅读量:<span>1.1W</span></p>
+                </div>
+              </div>
+              <div class="col-33">
+                <div>
+                  <p class="text-center"><img data-src="./img/raw_1499427718.png" alt="" class="lazy book-image"></p>
+                  <p class="text-center">奇点系列</p>
+                  <p class="text-center">阅读量:<span>2W</span></p>
+                </div>
+              </div>
+              <div class="col-33">
+                <div>
+                  <p class="text-center"><img data-src="./img/raw_1499735285.jpeg" alt="" class="lazy book-image"></p>
+                  <p class="text-center">巴菲特之道</p>
+                  <p class="text-center">阅读量:<span>0.2W</span></p>
+                </div>
+              </div>
+              <div class="col-33">
+                <div>
+                  <p class="text-center"><img data-src="./img/raw_1499427471.jpeg" alt="" class="lazy book-image"></p>
+                  <p class="text-center">世界的逻辑</p>
+                  <p class="text-center">阅读量:<span>1.1W</span></p>
+                </div>
+              </div>
+              <div class="col-33">
+                <div>
+                  <p class="text-center"><img data-src="./img/raw_1499427718.png" alt="" class="lazy book-image"></p>
+                  <p class="text-center">奇点系列</p>
+                  <p class="text-center">阅读量:<span>2W</span></p>
+                </div>
+              </div>
+              <div class="col-33">
+                <div>
+                  <p class="text-center"><img data-src="./img/raw_1499735285.jpeg" alt="" class="lazy book-image"></p>
+                  <p class="text-center">巴菲特之道</p>
+                  <p class="text-center">阅读量:<span>0.2W</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 发现 -->
+    <div class="view tab " id="tab2">
+      <div class="pages">
+        <div class="page">
+          <div class="page-content hide-toolbar-on-scroll">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left">
+                  <a href="#" class="link  open-left-panel">
+                <i class="fa fa-star"></i>
+            </a>
+                </div>
+                <div class="center">发现</div>
+                <div class="right">
+                  <a href="#" class="link  open-plus">
+                <i class="fa fa-plus"></i>
+            </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="row bg-color">
+              <div class="col-auto">
+                <h3 class="text-center">我的圈子</h3>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-auto">
+                <div>
+                  <p class="text-center"><img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt=""></p>
+                  <p class="text-center">阅览室</p>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div>
+                  <p class="text-center"><img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt=""></p>
+                  <p class="text-center">书友圈</p>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div>
+                  <p class="text-center"><img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt=""></p>
+                  <p class="text-center">听书</p>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div>
+                  <p class="text-center"><img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt=""></p>
+                  <p class="text-center">亲子阅读</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row bg-color">
+              <div class="col-auto">
+                <h3 class="text-center">辅助功能</h3>
+              </div>
+            </div>
+
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt="">
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        书香中国
+                      </div>
+                      <div class="item-after">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt="">
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        公益献书
+                      </div>
+                      <div class="item-after">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt="">
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        志愿者助读
+                      </div>
+                      <div class="item-after">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt="">
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        好友地图
+                      </div>
+                      <div class="item-after">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt="">
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        附近好友
+                      </div>
+                      <div class="item-after">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt="">
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        附近图书
+                      </div>
+                      <div class="item-after">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <img data-src="./img/2017-07-11_100437.png" class="lazy related-sections" alt="">
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        其他
+                      </div>
+                      <div class="item-after">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 通讯 -->
+    <div class="view tab " id="tab3">
+      <div class="pages">
+        <div class="page">
+
+          <div class="page-content hide-toolbar-on-scroll">
+
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left">
+                  <a href="#" class="link  open-left-panel">
+                <i class="fa fa-star"></i>
+            </a>
+                </div>
+                <div class="center">通讯录</div>
+                <div class="right">
+                  <a href="#" class="link  open-plus">
+                <i class="fa fa-plus"></i>
+            </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <!-- Buttons row as tabs controller -->
+              <p class="buttons-row">
+                <!-- Link to 1st tab, active -->
+
+                <a href="#subtab1" class="tab-link active button jsMsgTabBtn margin-zero">消息</a>
+
+                <!-- Link to 2nd tab -->
+
+                <a href="#subtab2" class="tab-link button jsMsgTabBtn margin-zero">好友</a>
+
+              </p>
+            </div>
+
+            <!-- Tabs, tabs wrapper -->
+            <div class="tabs">
+              <!-- Tab 1, active by default -->
+              <div id="subtab1" class="tab active">
+                <div class="content-block">
+                  <div class="list-block">
+                    <ul>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media">
+                            <img src="./img/2017-07-11_100437.png" alt="" class="related-sections">
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">
+                              用户123
+                              <p>这是一条消息</p>
+                            </div>
+                            <div class="item-after">
+                              2015-10-1
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media">
+                            <img src="./img/2017-07-11_100437.png" alt="" class="related-sections">
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">
+                              用户123
+                              <p>这是一条消息</p>
+                            </div>
+                            <div class="item-after">
+                              2015-10-1
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media">
+                            <img src="./img/2017-07-11_100437.png" alt="" class="related-sections">
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">
+                              用户123
+                              <p>这是一条消息</p>
+                            </div>
+                            <div class="item-after">
+                              2015-10-1
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media">
+                            <img src="./img/2017-07-11_100437.png" alt="" class="related-sections">
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">
+                              用户123
+                              <p>这是一条消息</p>
+                            </div>
+                            <div class="item-after">
+                              2015-10-1
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Tab 2 -->
+              <div id="subtab2" class="tab">
+                <div class="content-block">
+
+                  <div class="list-block">
+                    <ul>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media">
+                            <img src="./img/2017-07-11_100437.png" alt="" class="related-sections">
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">
+                              用户123
+                              <p>这是一条消息</p>
+                            </div>
+                            <div class="item-after">
+                              2015-10-1
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media">
+                            <img src="./img/2017-07-11_100437.png" alt="" class="related-sections">
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">
+                              用户123
+                              <p>这是一条消息</p>
+                            </div>
+                            <div class="item-after">
+                              2015-10-1
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media">
+                            <img src="./img/2017-07-11_100437.png" alt="" class="related-sections">
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">
+                              用户123
+                              <p>这是一条消息</p>
+                            </div>
+                            <div class="item-after">
+                              2015-10-1
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media">
+                            <img src="./img/2017-07-11_100437.png" alt="" class="related-sections">
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">
+                              用户123
+                              <p>这是一条消息</p>
+                            </div>
+                            <div class="item-after">
+                              2015-10-1
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media">
+                            <img src="./img/2017-07-11_100437.png" alt="" class="related-sections">
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">
+                              用户123
+                              <p>这是一条消息</p>
+                            </div>
+                            <div class="item-after">
+                              2015-10-1
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 我的 -->
+    <div class="view tab " id="tab4">
+      <div class="pages">
+        <div class="page">
+          <div class="page-content hide-toolbar-on-scroll">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left">
+                  <a href="#" class="link  open-left-panel">
+                <i class="fa fa-star"></i>
+            </a>
+                </div>
+                <div class="center">我的</div>
+                <div class="right">
+                  <a href="#" class="link  open-plus">
+                <i class="fa fa-sign-out"></i>
+            </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="blank-div bg-color"></div>
+
+            <div class="list-block margin-zero">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <img src="./img/avatar.jpg" alt="" class="related-sections">
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">
+                        阿简1996
+                        <p>信用积分:<span>100</span></p>
+                      </div>
+                      <div class="item-after">
+                        <i class="fa fa-angle-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- 占位符 -->
+              <div class="blank-div bg-color"></div>
+
+              <div class="row content-block margin-zero">
+                <div class="col-50">
+                  <p class="text-center"><i class="fa fa-cny"></i> 余额</p>
+                  <p style="color:red" class="text-center">0.00元</p>
+                </div>
+                <div class="col-50">
+                  <p class="text-center"><i class="fa fa-calendar"></i> &nbsp;签到<span> 2 </span>天</p>
+                  <p class="text-center check-in">
+                    <a type="button" class="button button-fill">签到</a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- 占位符 -->
+              <div class="blank-div bg-color"></div>
+
+              <div class="list-block margin-zero">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-media margin-zero"><i class="fa fa-arrow-down" style="color:green;"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">收入</div>
+                      <div class="item-after">
+                        <span class="badge">5</span>
+                        <i class="fa fa-angle-right" style="margin-left:1em;"></i>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-media margin-zero"><i class="fa fa-arrow-up" style="color:red"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">支出</div>
+                      <div class="item-after">
+                        <span class="badge">2</span>
+                        <i class="fa fa-angle-right" style="margin-left:1em;"></i>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- 登陆框 -->
+  <!-- Should be a direct child of BODY -->
+  <div class="login-screen">
+    <!-- Default view-page layout -->
+    <div class="views">
+      <div class="view">
+        <div class="pages">
+          <div class="page">
+            <div class="page-content">
+              <div style="max-width:300px;position:relative;top:15%" class="align-center">
+                <div>
+                  <p style="text-align:center;"><img class="avatar" src="./img/avatar.jpg" alt="" width="70" height="70"></p>
+                </div>
+                <div>
+                  <form class="login-form">
+                    <div class="list-block">
+                      <ul>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label custom-label">
+                                <i class="fa fa-user"></i>
+                              </div>
+                              <div class="item-input">
+                                <input type="text" placeholder="邮箱/手机">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label custom-label">
+                                <i class="fa fa-lock"></i>
+                              </div>
+                              <div class="item-input">
+                                <input type="password" placeholder="密码">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <p class="login-btn"><a href="#" class="button button-fill button-round color-green">登录</a></p>
+                      <p style="text-align:center;font-size:9px;"><a href="#">忘记密码?</a></p>
+
+                      <div class="clearfix">
+                        <div class="quick-login">
+                          <div class="float-left line">
+                          </div>
+                          <div class="float-left" id="quick_login">
+                            <p style="font-size:14px;"> 快捷登陆</p>
+                          </div>
+                          <div class="float-left line">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div style="margin-top:2em">
+                        <div style="width:15em;" class="align-center">
+                          <a href="#"><i class="fa fa-wechat fa-2x" style="color:green"></i> </a>
+                          <a href="#" class="easy-login-icon"><i class="fa fa-qq fa-2x" style="color:blue"></i> </a>
+                          <a href="#"><i class="fa fa-weibo fa-2x" style="color:red"></i> </a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Links popover -->
+  <div class="popover popover-links ">
+    <div class="popover-angle "></div>
+    <div class="popover-inner ">
+      <div class="list-block">
+        <ul class="popover-ul">
+          <li><a href="#" class="list-button item-link">
+              <i class="fa fa-location-arrow"></i> 图书地图
+            </a></li>
+          <li><a href="#" class="list-button item-link">
+            <i class="fa fa-qrcode"></i>  扫一扫
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Path to Framework7 Library JS-->
+  <script src="./js/framework7.min.js "></script>
+  <!-- Path to your app js-->
+  <script src="./js/my-app.js "></script>
+
+  <script>
+    $(document).ready(function () {
+
+      //填充‘通讯’标签页的标签
+      var fillColor = function (btn) {
+        var tabs = $('.jsMsgTabBtn');
+
+        tabs.css('background-color', '#fff');
+        tabs.css('color', '#2196f3');
+        tabs.css('border', '1px solid #2196f3');
+
+        $(btn).css('background-color', '#2196f3');
+        $(btn).css('color', '#fff');
+      }
+
+      //点击‘通讯’标签页时候，默认填充第一个标签
+      $('.tab3').click(function () {
+        fillColor($('.jsMsgTabBtn').first());
+      })
+
+      //点击不同的标签页，渲染
+      $('.jsMsgTabBtn').click(function () {
+        fillColor(this)
+      })
+
+      //搜索栏点击，遮罩展开，输入栏及其组件浮现
+      $('.jsSearch').on('focus', function () {
+        $('.searchbar-overlay').css('opacity', 1);
+        $('.searchbar-input').css('z-index', 100000000);
+
+        $('.searchbar-clear').css('z-index', 100000000);
+        $('.searchbar-clear').css('opacity', 1);
+
+      })
+
+      //输入框失焦
+      $('.jsSearch').on('blur', function () {
+        $('.searchbar-overlay').css('opacity', 0);
+        $('.jsSearch').css('z-index', 0);
+
+        $('.searchbar-clear').css('z-index', 0);
+        $('.searchbar-clear').css('opacity', 0);
+      })
+
+
+    })
+  </script>
+</body>
+
+</html>

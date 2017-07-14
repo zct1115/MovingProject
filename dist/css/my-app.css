@@ -1,0 +1,68 @@
+.sideBar{
+    font-size:1.20em !important;
+    margin-right: 0.2em;
+    color: #535559;
+}
+.avatar-bg{
+    background: url('../img/2017-07-11_100437.png');
+    background-color: rgba(0, 0, 0, 0.8);
+    height:238px;
+    background-repeat: no-repeat;
+}
+.avatar-bg > div{
+    position:relative;top:36%;left:36%;
+    width: 70px;
+}
+.avatar-bg > div > img{
+    border-radius: 100px;
+}
+
+.avatar-bg > div > p {
+    font-weight: bold;
+    text-align: center;
+}
+
+.list-block .item-content:hover{
+    background-color: #c2bcc2;
+}
+
+.popover{
+    width: 150px;
+}
+.align-center{
+    margin:0px auto;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+/*毛玻璃特效*/
+.blur {    
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);    
+}
+.clearfix ::after {
+    display: block;
+    content: ". ";
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+.bg-color{
+    background: #eff1f4;
+}
+.blank-div{
+    min-height:1em;
+}
+.toolbar~.page-content{
+    padding-top: 0px !important;
+}
+.item-media{
+    padding: 0px !important;
+    margin-bottom: 1em;
+}
+
