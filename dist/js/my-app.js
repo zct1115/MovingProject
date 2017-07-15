@@ -1,6 +1,7 @@
 var app = new Framework7({
     pushState: true,
     swipePanel: 'left',
+    domCache: true
 });
 
 var $$ = Dom7;
@@ -24,15 +25,14 @@ $$('#tab2').on('tab:show', function () {
 })
 
 //通讯录标签页ajax加载
-$$('#tab3').on('tab:show', function () {
-    app.addView('#tab3').router.loadPage('communicate.html');
-})
+// $$('#tab3').on('tab:show', function () {
+//     app.addView('#tab3').router.loadPage('communicate.html');
+// })
 
 $$('#tab4').on('tab:show', function () {
     app.addView('#tab4').router.loadPage('myInfo.html');
 })
 
 $$('.open-login-screen').on('click', function () {
-    // app.addView('.view-main').router.load('login.html');
     app.loginScreen();
 })
