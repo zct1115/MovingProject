@@ -22,3 +22,8 @@ var mySwiper3 = app.swiper('.swiper-3', {
 $$('.open-login-screen').on('click', function () {
     app.loginScreen();
 })
+
+$('.register_btn').click(function () {
+    var mainView = app.addView('.view');
+    mainView.router.loadPage('../register.html');
+})
