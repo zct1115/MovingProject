@@ -23,85 +23,10 @@
 </head>
 
 <body>
-  <!-- First, we need to add Panel's overlay that will overlays app while panel is opened -->
-  <div class="panel-overlay"></div>
 
-  <!-- Left panel -->
-  <div class="panel panel-left panel-reveal">
-    <div class="content-block">
-      <div class="avatar-bg">
-        <div>
-          <img src="./img/avatar.jpg" alt="" width="70">
-          <p>阿简1996</p>
-        </div>
-      </div>
-      <div class="list-block">
-        <ul>
-          <li class="item-content">
-            <div class="item-media"><i class="fa fa-home"></i></div>
-            <div class="item-inner">
-              <div class="item-title">首页</div>
-              <!-- <div class="item-after">Label</div> -->
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i class="fa fa-book"></i></div>
-            <div class="item-inner">
-              <div class="item-title">我的借阅</div>
-              <div class="item-after"><span class="badge">5</span></div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i class="fa fa-server"></i></div>
-            <div class="item-inner">
-              <div class="item-title">书架</div>
-              <div class="item-after"><span class="badge">10</span></div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i class="fa fa-group"></i></div>
-            <div class="item-inner">
-              <div class="item-title">阅览室</div>
-              <div class="item-after"><span class="badge">2</span></div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i class="fa fa-heart"></i></div>
-            <div class="item-inner">
-              <div class="item-title">关注</div>
-              <div class="item-after"><span class="badge">25</span></div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i class="fa fa-moon-o"></i></div>
-            <div class="item-inner">
-              <div class="item-title">夜间模式</div>
-              <div class="item-after">
+  <!-- 侧拉 -->
+  <div id="sideMenu">
 
-              </div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i class="fa fa-gear"></i></div>
-            <div class="item-inner">
-              <div class="item-title">设置</div>
-              <div class="item-after">
-
-              </div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i class="fa fa-info-circle"></i></div>
-            <div class="item-inner">
-              <div class="item-title">关于</div>
-              <div class="item-after">
-
-              </div>
-            </div>
-          </li>
-
-      </div>
-    </div>
   </div>
 
   <div class="views tabs toolbar-through">
@@ -309,153 +234,24 @@
 
     <!-- 发现 -->
     <div class="view tab " id="tab2">
-      <div class="pages">
-      </div>
+
     </div>
 
     <!-- 通讯 -->
     <div class="view tab " id="tab3">
-      <div class="pages">
 
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="left">
-              <a href="#" class="link  open-left-panel">
-                <i class="fa fa-star"></i>
-            </a>
-            </div>
-            <div class="center">通讯录</div>
-            <div class="right">
-              <a href="#" class="link  open-plus">
-                <i class="fa fa-plus"></i>
-            </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="page-content hide-toolbar-on-scroll" style="margin-top:70px;margin-bottom:14px;">
-
-          <!-- Buttons row as tabs controller -->
-          <p class="buttons-row" style="margin:0px 2em;">
-            <!-- Link to 1st tab, active -->
-
-            <a href="#subtab1" class="subtab1 tab-link active button jsMsgTabBtn margin-zero">消息</a>
-
-            <!-- Link to 2nd tab -->
-
-            <a href="#subtab2" class="subtab2 tab-link button jsMsgTabBtn margin-zero">好友</a>
-
-          </p>
-
-          <!-- Tabs, tabs wrapper -->
-          <div class="tabs">
-            <!-- Tab 1, active by default -->
-            <div id="subtab1" class="tab active">
-
-              <div class="list-block">
-                <div id="find_msg">
-
-                </div>
-              </div>
-
-            </div>
-            <!-- Tab 2 -->
-            <div id="subtab2" class="tab">
-              <div class="list-block">
-                <div id='find_friends'>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
 
     <!-- 我的 -->
     <div class="view tab " id="tab4">
-      <div class="pages">
 
-      </div>
     </div>
-  </div>
   </div>
 
   <!-- 登陆框 -->
   <!-- Should be a direct child of BODY -->
-  <div class="login-screen">
-    <!-- Default view-page layout -->
-    <div class="views">
-      <div class="view ">
-        <div class="pages">
-          <div class="page">
-            <div class="page-content">
-              <div style="max-width:300px;position:relative;top:15%" class="align-center">
-                <div>
-                  <p style="text-align:center;"><img class="avatar" src="./img/avatar.jpg" alt="" width="70" height="70"></p>
-                </div>
-                <div>
-                  <form class="login-form">
-                    <div class="list-block">
-                      <ul>
-                        <li>
-                          <div class="item-content">
-                            <div class="item-inner">
-                              <div class="item-title label custom-label">
-                                <i class="fa fa-user"></i>
-                              </div>
-                              <div class="item-input">
-                                <input type="text" placeholder="邮箱/手机">
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item-content">
-                            <div class="item-inner">
-                              <div class="item-title label custom-label">
-                                <i class="fa fa-lock"></i>
-                              </div>
-                              <div class="item-input">
-                                <input type="password" placeholder="密码">
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+  <div id="login">
 
-                      <p class="login-btn"><a href="#" class="button button-fill button-round color-green">登录</a></p>
-                      <p style="text-align:center;font-size:9px;"><a href="#">忘记密码?</a></p>
-
-                      <div class="clearfix">
-                        <div class="quick-login">
-                          <div class="float-left line">
-                          </div>
-                          <div class="float-left" id="quick_login">
-                            <p style="font-size:14px;"> 快捷登陆</p>
-                          </div>
-                          <div class="float-left line">
-                          </div>
-                        </div>
-                      </div>
-
-                      <div style="margin-top:2em">
-                        <div style="width:15em;" class="align-center">
-                          <a href="#"><i class="fa fa-wechat fa-2x" style="color:green"></i> </a>
-                          <a href="#" class="easy-login-icon"><i class="fa fa-qq fa-2x" style="color:blue"></i> </a>
-                          <a href="#"><i class="fa fa-weibo fa-2x" style="color:red"></i> </a>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <!-- Links popover -->
@@ -476,6 +272,15 @@
   </div>
 
   <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script>
+    $('#sideMenu').load('./panel.html');
+    $('#tab3').load("./communicate.html");
+    $('#tab4').load('./myInfo.html');
+    $('#login').load('./login.html');
+    $('#tab2').load('./find.html');
+    $('#find_msg').load('../find_msg.html');
+    $('#find_friends').load('../find_friends.html');
+  </script>
   <!-- Path to Framework7 Library JS-->
   <script src="./js/framework7.min.js "></script>
   <!-- Path to your app js-->

@@ -41,7 +41,5 @@ $(document).ready(function () {
         $('.searchbar-clear').css('opacity', 0);
     })
 
-    //发现页面加载两份列表
-    $('#find_msg').load('../find_msg.html');
-    $('#find_friends').load('../find_friends.html');
+   
 })
