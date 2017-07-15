@@ -30,7 +30,7 @@
 
   <!-- Left panel -->
   <div class="panel panel-left panel-reveal">
-    <div class="view left-panel-view">
+    <div class="content-block">
       <div class="avatar-bg">
         <div>
           <img src="./img/avatar.jpg" alt="" width="70">
@@ -101,6 +101,7 @@
               </div>
             </div>
           </li>
+
       </div>
     </div>
   </div>
@@ -118,12 +119,12 @@
                   <i class="fa fa-location-arrow fa-2x"></i>
                   <span class="tabbar-label">发现</span>
               </a>
-        <a href="login.html" class="tab-link open-login-screen">
+        <a href="#" class="tab-link open-login-screen">
                 <span>
                   <i class="fa fa-plus-circle fa-3x"></i>
                 </span>
               </a>
-        <a href="#tab3" class="tab-link">
+        <a href="#tab3" class="tab-link tab3">
                   <i class="fa fa-address-book fa-2x"></i>
                   <span class="tabbar-label">通讯</span>
               </a>
@@ -324,74 +325,78 @@
     <!-- 我的 -->
     <div class="view tab " id="tab4">
       <div class="pages">
-        <div class="login-screen">
-          <!-- Default view-page layout -->
-          <div class="views">
-            <div class="view ">
-              <div class="pages">
-                <div class="page">
-                  <div class="page-content">
-                    <div style="max-width:300px;position:relative;top:15%" class="align-center">
-                      <div>
-                        <p style="text-align:center;"><img class="avatar" src="./img/avatar.jpg" alt="" width="70" height="70"></p>
-                      </div>
-                      <div>
-                        <form class="login-form">
-                          <div class="list-block">
-                            <ul>
-                              <li>
-                                <div class="item-content">
-                                  <div class="item-inner">
-                                    <div class="item-title label custom-label">
-                                      <i class="fa fa-user"></i>
-                                    </div>
-                                    <div class="item-input">
-                                      <input type="text" placeholder="邮箱/手机">
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="item-content">
-                                  <div class="item-inner">
-                                    <div class="item-title label custom-label">
-                                      <i class="fa fa-lock"></i>
-                                    </div>
-                                    <div class="item-input">
-                                      <input type="password" placeholder="密码">
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-                            </ul>
+      </div>
+    </div>
+  </div>
+  </div>
 
-                            <p class="login-btn"><a href="#" class="button button-fill button-round color-green">登录</a></p>
-                            <p style="text-align:center;font-size:9px;"><a href="#">忘记密码?</a></p>
-
-                            <div class="clearfix">
-                              <div class="quick-login">
-                                <div class="float-left line">
-                                </div>
-                                <div class="float-left" id="quick_login">
-                                  <p style="font-size:14px;"> 快捷登陆</p>
-                                </div>
-                                <div class="float-left line">
-                                </div>
+  <!-- 登陆框 -->
+  <!-- Should be a direct child of BODY -->
+  <div class="login-screen">
+    <!-- Default view-page layout -->
+    <div class="views">
+      <div class="view ">
+        <div class="pages">
+          <div class="page">
+            <div class="page-content">
+              <div style="max-width:300px;position:relative;top:15%" class="align-center">
+                <div>
+                  <p style="text-align:center;"><img class="avatar" src="./img/avatar.jpg" alt="" width="70" height="70"></p>
+                </div>
+                <div>
+                  <form class="login-form">
+                    <div class="list-block">
+                      <ul>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label custom-label">
+                                <i class="fa fa-user"></i>
                               </div>
-                            </div>
-
-                            <div style="margin-top:2em">
-                              <div style="width:15em;" class="align-center">
-                                <a href="#"><i class="fa fa-wechat fa-2x" style="color:green"></i> </a>
-                                <a href="#" class="easy-login-icon"><i class="fa fa-qq fa-2x" style="color:blue"></i> </a>
-                                <a href="#"><i class="fa fa-weibo fa-2x" style="color:red"></i> </a>
+                              <div class="item-input">
+                                <input type="text" placeholder="邮箱/手机">
                               </div>
                             </div>
                           </div>
-                        </form>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title label custom-label">
+                                <i class="fa fa-lock"></i>
+                              </div>
+                              <div class="item-input">
+                                <input type="password" placeholder="密码">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <p class="login-btn"><a href="#" class="button button-fill button-round color-green">登录</a></p>
+                      <p style="text-align:center;font-size:9px;"><a href="#">忘记密码?</a></p>
+
+                      <div class="clearfix">
+                        <div class="quick-login">
+                          <div class="float-left line">
+                          </div>
+                          <div class="float-left" id="quick_login">
+                            <p style="font-size:14px;"> 快捷登陆</p>
+                          </div>
+                          <div class="float-left line">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div style="margin-top:2em">
+                        <div style="width:15em;" class="align-center">
+                          <a href="#"><i class="fa fa-wechat fa-2x" style="color:green"></i> </a>
+                          <a href="#" class="easy-login-icon"><i class="fa fa-qq fa-2x" style="color:blue"></i> </a>
+                          <a href="#"><i class="fa fa-weibo fa-2x" style="color:red"></i> </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -400,11 +405,6 @@
       </div>
     </div>
   </div>
-  </div>
-
-  <!-- 登陆框 -->
-  <!-- Should be a direct child of BODY -->
-
 
   <!-- Links popover -->
   <div class="popover popover-links ">
@@ -428,54 +428,8 @@
   <script src="./js/framework7.min.js "></script>
   <!-- Path to your app js-->
   <script src="./js/my-app.js "></script>
-
-  <script>
-    $(document).ready(function () {
-
-      //填充‘通讯’标签页的标签
-      var fillColor = function (btn) {
-        var tabs = $('.jsMsgTabBtn');
-
-        tabs.css('background-color', '#fff');
-        tabs.css('color', '#2196f3');
-        tabs.css('border', '1px solid #2196f3');
-
-        $(btn).css('background-color', '#2196f3');
-        $(btn).css('color', '#fff');
-      }
-
-      //点击‘通讯’标签页时候，默认填充第一个标签
-      $('.tab3').click(function () {
-        fillColor($('.jsMsgTabBtn').first());
-      })
-
-      //点击不同的标签页，渲染
-      $('.jsMsgTabBtn').click(function () {
-        fillColor(this)
-      })
-
-      //搜索栏点击，遮罩展开，输入栏及其组件浮现
-      $('.jsSearch').on('focus', function () {
-        $('.searchbar-overlay').css('opacity', 1);
-        $('.searchbar-input').css('z-index', 100000000);
-
-        $('.searchbar-clear').css('z-index', 100000000);
-        $('.searchbar-clear').css('opacity', 1);
-
-      })
-
-      //输入框失焦
-      $('.jsSearch').on('blur', function () {
-        $('.searchbar-overlay').css('opacity', 0);
-        $('.jsSearch').css('z-index', 0);
-
-        $('.searchbar-clear').css('z-index', 0);
-        $('.searchbar-clear').css('opacity', 0);
-      })
-
-
-    })
-  </script>
+  <!-- custom js -->
+  <script src="./js/custom.js"></script>
 </body>
 
 </html>
