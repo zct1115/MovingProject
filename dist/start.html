@@ -1,0 +1,80 @@
+<!-- 启动页面 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2196f3">
+    <link rel="stylesheet" href="./css/framework7.ios.min.css">
+    <link rel="stylesheet" href="./css/framework7.material.min.css">
+    <link rel="stylesheet" href="./css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="./css/framework7.material.colors.min.css">
+    <link rel="stylesheet" href="./css/my-app.css">
+    <style>
+        .swiper-container {
+            height: 100%;
+        }
+
+        .swiper-slide {
+            background: #fff;
+        }
+
+        .swiper-slide span {
+            text-align: center;
+            display: block;
+            margin: 20px;
+            font-size: 21px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="views">
+        <div class="view">
+            <div class="pages">
+                <div class="page">
+                    <div class="page-content">
+                        <div class="swiper-container swiper-start">
+                            <!-- Slides wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide" style="background-image:url('./img/bg.jpg');background-repeat:no-repeat;background-size:cover">
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('./img/wechat_img.jpg');background-repeat:no-repeat;background-size:cover;background-position:center center;">
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="open-popover">click me</a>
+                                </div>
+                            </div>
+                            <!-- Pagination, if required -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Links popover -->
+    <div class="popover popover-links">
+        <div class="popover-angle"></div>
+        <div class="popover-inner">
+            <div class="list-block">
+                <ul>
+                    <li><a href="#" class="list-button item-link">Link 1</a></li>
+                    <li><a href="#" class="list-button item-link">Link 2</a></li>
+                    <li><a href="#" class="list-button item-link">Link 3</a></li>
+                    <li><a href="#" class="list-button item-link">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./js/framework7.min.js "></script>
+    <script src="./js/my-app.js "></script>
+</body>
+
+</html>
