@@ -6,6 +6,10 @@ var app = new Framework7({
 
 var $$ = Dom7;
 
+var mainView = app.addView('.view-main', {
+    // dynamicNavbar: true
+})
+
 //下拉弹窗
 $$('.open-plus').on('click', function () {
     var clickedPlus = this;
@@ -29,6 +33,11 @@ $$('.open-login-screen').on('click', function () {
     app.loginScreen();
 })
 
-$$('.user_detail').on('click', function () {
-    app.addView('.view').router.loadPage('../user_detail.html')
+$$(document).on('pageInit', function (e) {
+    // Get page data from event data
+    var page = e.detail.page;
+
+    // if (page.name == 'user_detail')
+    // Following code will be executed for page with data-page attribute equal to "about"
+
 })
