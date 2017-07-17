@@ -34,10 +34,39 @@ $$('.open-login-screen').on('click', function () {
 })
 
 $$(document).on('pageInit', function (e) {
-    // Get page data from event data
+
+    //获取当前初始化页面名称
     var page = e.detail.page;
 
-    // if (page.name == 'user_detail')
-    // Following code will be executed for page with data-page attribute equal to "about"
+    if (page.name == 'user_detail') {
+        //性别选择
+        $$('.open-gender-picker').on('click', function () {
+            var buttons1 = [
+                {
+                    text: '选择性别',
+                    label: true
+                },
+                {
+                    text: '男',
+                    bold: true
+                },
+                {
+                    text: '女',
+                }
+            ];
+            var buttons2 = [
+                {
+                    text: '取消',
+                    color: 'red'
+                }
+            ];
+            var groups = [buttons1, buttons2];
+            app.actions(groups);
+        });
 
+        //图片预览
+        $$('.avatar-broswer').on('click', function () {
+            
+        })
+    }
 })
