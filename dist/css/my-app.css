@@ -96,3 +96,20 @@
 .margin-left-16{
     margin-left: 15px;
 }
+/* 水平居中 */
+.vertical-center-row{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: auto;
+    flex-direction: row;
+}
+/* 垂直居中 */
+.vertical-center-col{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

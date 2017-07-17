@@ -7,7 +7,6 @@ var app = new Framework7({
 var $$ = Dom7;
 
 var mainView = app.addView('.view-main', {
-    // dynamicNavbar: true
 })
 
 //下拉弹窗
@@ -63,10 +62,7 @@ $$(document).on('pageInit', function (e) {
             var groups = [buttons1, buttons2];
             app.actions(groups);
         });
-
-        //图片预览
-        $$('.avatar-broswer').on('click', function () {
-            
-        })
     }
 })
+
+
