@@ -14,10 +14,8 @@
             </div>
         </div>
 
-
         <div class="list-block">
             <form>
-
                 <ul>
                     <li>
                         <div class="item-content">
@@ -55,11 +53,11 @@
                                 <div class="item-title label">姓名</div>
                                 <div class="item-input">
                                     <div class="vertical-center-row">
-                                        <select style="width:100px">
-                                            <option value="anonymous">匿名</option>
+                                        <select style="width:100px" id='isAnonymous'>
                                             <option value="notAnonymous">公开</option>
+                                             <option value="anonymous">匿名</option>
                                         </select>
-                                        <input type="text" name="userName" value="" class="" placeholder="姓名">
+                                        <input type="text" name="userName" value="" class="jsUserName" placeholder="姓名">
                                     </div>
                                 </div>
                             </div>
@@ -80,15 +78,15 @@
                             <div class="item-inner">
                                 <div class="item-title label">方式</div>
                                 <div class="item-input">
-                                    <select>
-                                        <option value="donate">我要捐书</option>
+                                    <select id='donateOrShared'>
                                         <option value="share">我要共享</option>
+                                         <option value="donate">我要捐书</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="jsHideOnShared">
                         <div class="item-content">
                             <div class="item-inner">
                                 <div class="item-title label">图书押金</div>
@@ -98,7 +96,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="jsHideOnShared">
                         <div class="item-content">
                             <div class="item-inner">
                                 <div class="item-title label">日押金</div>

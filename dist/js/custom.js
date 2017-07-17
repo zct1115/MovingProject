@@ -41,5 +41,31 @@ $(document).ready(function () {
         $('.searchbar-clear').css('opacity', 0);
     })
 
-   
+    /**
+     * 若用户选择捐书，隐藏下面的租金输入。
+     * 否则显示租金输入
+     */
+    $('#donateOrShared').change(function () {
+        var checkValue = $('#donateOrShared').val();
+        if (checkValue == 'donate') {
+            $('.jsHideOnShared').css('display', 'none')
+
+        } else {
+            $('.jsHideOnShared').css('display', 'block')
+
+        }
+    })
+
+
+    /**
+     * 点击匿名隐藏名字输入
+     */
+    $('#isAnonymous').change(function () {
+        var checkValue = $('#isAnonymous').val();
+        if (checkValue == 'anonymous') {
+            $('.jsUserName').css('display', 'none')
+        } else {
+            $('.jsUserName').css('display', 'block')
+        }
+    })
 })
