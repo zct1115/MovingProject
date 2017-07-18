@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/haritable_act.css">
     <link rel="stylesheet" href="./css/confirm_book_donate.css">
-
+    <link rel="stylesheet" href="./css/w3.css">
 
 </head>
 
@@ -669,7 +669,7 @@
                                             <p class="text-center">等级：&nbsp;
                                                 <i class="fa fa-diamond user_level_diamond"></i> <i class="fa fa-diamond user_level_diamond"></i>
                                             </p>
-                                            <p class="text-center">积分:<span> 100</span></p>
+                                            <p class="text-center">书币:<span> 100</span></p>
                                         </div>
                                     </div>
 
@@ -723,6 +723,73 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- 修改密码弹框 -->
+    <div class="popup popup-modify-pwd ">
+
+        <div class="navbar navbar-fixed ">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link close-popup">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                </div>
+
+                <div class="center">修改密码</div>
+
+                <div class="right">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <form class="vertical-center-row">
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media" style="margin:0 auto">
+                                    <div class="vertical-center-row">
+                                        <i class="fa fa-lock"></i>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <!-- <div class="item-title floating-label">原密码</div> -->
+                                    <div class="item-input">
+                                        <input type="password" name="raw_pwd" placeholder="原密码">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media" style="margin:0 auto">
+                                    <div class="vertical-center-row">
+                                        <i class="fa fa-lock"></i>
+
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <!-- <div class="item-title floating-label">原密码</div> -->
+                                    <div class="item-input">
+                                        <input type="password" name="raw_pwd" placeholder="新密码">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <p><a href="#" class="button button-fill">
+                确认修改&nbsp;&nbsp;<i class="fa fa-arrow-right"> </i>
+            </a></p>
+                </div>
+
+            </form>
+        </div>
+
+
     </div>
 
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>

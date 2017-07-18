@@ -1,7 +1,7 @@
 var app = new Framework7({
     pushState: true,
     swipePanel: 'left',
-    // hideNavbarOnPageScroll: true
+    material: true
 });
 
 var $$ = Dom7;
@@ -62,7 +62,9 @@ $$(document).on('pageInit', function (e) {
             var groups = [buttons1, buttons2];
             app.actions(groups);
         });
+    } else if (page.name == 'edit_user_detail') {
+        $$('.jsEditPwd').on('click', function () {
+            app.popup('.popup-modify-pwd');
+        })
     }
 })
-
-
