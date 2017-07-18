@@ -66,5 +66,7 @@ $$(document).on('pageInit', function (e) {
         $$('.jsEditPwd').on('click', function () {
             app.popup('.popup-modify-pwd');
         })
+    } else if (page.name == 'app_settings' && $$('body').hasClass('with-panel-left-reveal')) {
+        app.closePanel();
     }
 })
